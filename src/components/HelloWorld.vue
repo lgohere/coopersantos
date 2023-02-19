@@ -139,77 +139,39 @@
           </v-col>
           <v-col>
             <v-row>
-              <v-col
-                style="background-color: #e8f5e9"
-                class="d-flex flex-row pa-7 justify-space-between"
-              >
-                <h2 class="font-weight-medium">ABC-4558</h2>
-                <v-btn class="box-shadow" variant="outlined" color="primary">
-                  Whatsapp</v-btn
+              <v-sheet style="height: 100vh; width: 100%" class="glass">
+                Fundo
+                <v-col
+                  cols="12"
+                  class="d-flex justify-center"
+                  style="color: white; background: #8080808a; height: 100vh, z-index: 1"
                 >
-              </v-col>
-            </v-row>
-            <v-row>
-              <v-col>
-                <v-card>
-                  <v-tabs
-                    v-model="tab"
-                    bg-color="transparent"
-                    color="basil"
-                    grow
+                  Mapa tempo real
+                  <v-card
+                    style="
+                      height: 20vh;
+                      width: 45%;
+                      position: absolute;
+                      border-radius: 15px;
+                      top: 75vh;
+                    "
+                    class="glass mt-7"
                   >
-                    <v-tab v-for="item in items" :key="item" :value="item">
-                      {{ item }}
-                    </v-tab>
-                  </v-tabs>
-
-                  <v-window v-model="tab">
-                    <v-window-item
-                      v-for="item in items"
-                      :key="item"
-                      :value="item"
-                    >
-                      <v-card color="basil" flat>
-                        <v-card-title class="pt-6">
-                          Ocupação da Carga
-                        </v-card-title>
-                      </v-card>
-                      <div class="d-flex">
-                        <v-img width="100" src="@/assets/truck-perfil.svg">
-                          <div
-                            style="position: relative; z-index: 1; height: 100%"
-                          >
-                            <div
-                              style="
-                                position: relative;
-                                z-index: 2;
-                                top: 8px;
-                                display: flex;
-                                place-content: center;
-                                align-items: center;
-                                flex-flow: row nowrap;
-                                margin-left: 16vh;
-                                margin-right: 2vh;
-                                height: 14vh;
-                              "
-                            >
-                              <v-progress-linear
-                                v-model="skill"
-                                color="blue-grey"
-                                height="100%"
-                              >
-                                <template v-slot:default="{ value }">
-                                  <strong>{{ Math.ceil(value) }}%</strong>
-                                </template>
-                              </v-progress-linear>
-                            </div>
-                          </div>
-                        </v-img>
-                      </div>
-                    </v-window-item>
-                  </v-window>
-                </v-card>
-              </v-col>
+                    outro card
+                  </v-card>
+                  <v-card
+                    style="
+                      height: 8vh;
+                      position: absolute;
+                      width: 40%;
+                      border-radius: 15px;
+                    "
+                    class="glass mt-7"
+                  >
+                    Novo test
+                  </v-card>
+                </v-col>
+              </v-sheet>
             </v-row>
           </v-col>
         </v-row>
