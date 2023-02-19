@@ -1,62 +1,65 @@
 <template>
-  <v-app id="inspire">
-    <v-navigation-drawer v-model="drawer">
-      <v-sheet color="green-lighten-5">
-        <div class="d-flex py-8 px-8 flex-row justify-center">
-          <h3>COOPERSANTOS</h3>
+  <v-app class="main-bg">
+    <v-sheet>
+      <v-navigation-drawer v-model="drawer">
+        <div class="d-flex pt-10 pb-4 px-4 flex-row justify-center">
+          <h3 class="brand-color">COOPERSANTOS</h3>
         </div>
-      </v-sheet>
-      <v-sheet class="pa-4">
-        <div class="py-4 d-flex flex-row justify-space-around align-center">
-          <v-avatar color="grey-darken-1" size="40"></v-avatar>
-          <div>
-            <div><span class="font-weight-bold">Luiz</span></div>
-            <div>john@google.com</div>
+        <v-sheet class="py-6 px-4">
+          <div class="py-4 d-flex flex-row justify-space-around align-center">
+            <v-avatar color="grey-darken-1" size="40"></v-avatar>
+            <div>
+              <div><span class="font-weight-bold">Luiz</span></div>
+              <div>john@google.com</div>
+            </div>
           </div>
-        </div>
-      </v-sheet>
+        </v-sheet>
 
-      <!-- <v-divider></v-divider> -->
+        <!-- <v-divider></v-divider> -->
 
-      <v-list class="pa-4">
-        <v-list-item
-          class="py-4"
-          v-for="[icon, text] in links"
-          :key="icon"
-          link
-        >
-          <template v-slot:prepend>
-            <v-icon>{{ icon }}</v-icon>
-          </template>
+        <v-list class="pa-4">
+          <v-list-item
+            class="py-4"
+            v-for="[icon, text] in links"
+            :key="icon"
+            link
+          >
+            <template v-slot:prepend>
+              <v-icon>{{ icon }}</v-icon>
+            </template>
 
-          <v-list-item-title class="font-weight-bold">{{
-            text
-          }}</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
+            <v-list-item-title class="font-weight-bold">{{
+              text
+            }}</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-navigation-drawer>
+    </v-sheet>
 
     <v-main>
       <v-container fluid>
         <v-row>
-          <v-col cols="6" style="background-color: #c8e6c92b" class="pa-7">
+          <v-col cols="5" class="pt-8 glass" style="height: 100vh">
             <v-row>
               <v-col class="d-flex flex-row justify-space-between">
                 <h2 class="font-weight-medium">Gerenciador de Carregamento</h2>
-                <v-btn class="box-shadow" variant="outlined" color="primary"
+                <v-btn
+                  class="box-shadow glass"
+                  variant="outlined"
+                  color="primary"
                   >Adicionar Ordem</v-btn
                 >
               </v-col>
             </v-row>
             <v-row>
-              <v-col id="botoesMonitoramento">
-                <v-btn class="mr-2" variant="outlined"
+              <v-col cols="12" class="d-flex justify-start">
+                <v-btn class="mr-2 glass" variant="outlined"
                   >Ver Todos<v-sheet class="ml-2">30</v-sheet></v-btn
                 >
-                <v-btn class="mr-2" variant="outlined"
+                <v-btn class="mr-2 glass" variant="outlined"
                   >Em Andamento <v-sheet class="ml-2">18</v-sheet></v-btn
                 >
-                <v-btn class="mr-2" variant="outlined"
+                <v-btn class="mr-2 glass" variant="outlined"
                   >Pendentes <v-sheet class="ml-2">12</v-sheet></v-btn
                 >
               </v-col>
@@ -216,6 +219,10 @@
 </template>
 
 <style scoped>
+.botoesStatus {
+  display: flex;
+}
+
 .v-btn {
   text-transform: none;
   letter-spacing: none;
@@ -223,6 +230,28 @@
 
 .caminhao {
   background-image: url("@/assets/truck-perfil.svg");
+}
+
+.main-bg {
+  background: rgba(37, 214, 108, 0.5);
+  background: linear-gradient(
+    to right bottom,
+    rgba(37, 214, 108, 0.7),
+    rgba(0, 0, 0, 0.3)
+  );
+}
+
+.glass {
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+}
+
+.brand-color {
+  color: #35b368;
 }
 
 .v-progress-linear {
