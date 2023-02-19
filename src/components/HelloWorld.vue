@@ -141,12 +141,58 @@
             <v-row>
               <v-sheet style="height: 100vh; width: 100%" class="glass">
                 Fundo
-                <v-col
-                  cols="12"
-                  class="d-flex justify-center"
-                  style="color: white; background: #8080808a; height: 100vh, z-index: 1"
-                >
+                <v-col cols="12" class="d-flex justify-center mapa">
                   Mapa tempo real
+                  <v-card
+                    style="
+                      height: 8vh;
+                      position: absolute;
+                      width: 40%;
+                      border-radius: 15px;
+                      z-index: 2;
+                      top: 7vh;
+                    "
+                    class="glass d-flex"
+                  >
+                    <v-row class="d-flex">
+                      <v-col
+                        class="d-flex flex-column align-center justify-center"
+                        cols="3"
+                      >
+                        <div class="d-flex flex-column">
+                          <h4>Posição Atual</h4>
+                          <h5>Km 206</h5>
+                        </div>
+                      </v-col>
+                      <v-col
+                        class="d-flex align-center justify-center"
+                        cols="3"
+                      >
+                        <div class="d-flex flex-column">
+                          <h4>Ultima Parada</h4>
+                          <h5>2 hrs atrás</h5>
+                        </div>
+                      </v-col>
+                      <v-col
+                        class="d-flex align-center justify-center"
+                        cols="3"
+                      >
+                        <div class="d-flex flex-column">
+                          <h4>Distancia</h4>
+                          <h5>250 km</h5>
+                        </div>
+                      </v-col>
+                      <v-col
+                        class="d-flex align-center justify-center"
+                        cols="3"
+                      >
+                        <div class="d-flex flex-column">
+                          <h4>Velocidade</h4>
+                          <h5>90 km/h</h5>
+                        </div>
+                      </v-col>
+                    </v-row>
+                  </v-card>
                   <v-card
                     style="
                       height: 20vh;
@@ -158,17 +204,6 @@
                     class="glass mt-7"
                   >
                     outro card
-                  </v-card>
-                  <v-card
-                    style="
-                      height: 8vh;
-                      position: absolute;
-                      width: 40%;
-                      border-radius: 15px;
-                    "
-                    class="glass mt-7"
-                  >
-                    Novo test
                   </v-card>
                 </v-col>
               </v-sheet>
@@ -216,20 +251,12 @@
   color: #35b368;
 }
 
-.v-progress-linear {
-  /* top: 17px;
-  height: 128px;
-  --v-progress-linear-height: 67px;
-  left: 60%;
-  transform: translateX(-50%);
-  position: absolute;
-  width: 74%; */
+.mapa {
+  color: white;
+  background: #8080808a;
+  height: 100vh;
+  z-index: 1;
 }
-/* width: 74%;
-    margin-top: 20px;
-    margin-left: 172px;
-    height: 11vh;
-} */
 </style>
 
 <script>
