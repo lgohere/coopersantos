@@ -140,7 +140,7 @@
           <v-col>
             <v-row>
               <v-sheet style="height: 100vh; width: 100%" class="glass">
-                Fundo
+                <!-- Fundo -->
                 <v-col cols="12" class="d-flex justify-center mapa">
                   Mapa tempo real
                   <v-card
@@ -161,7 +161,7 @@
                       >
                         <div class="d-flex flex-column">
                           <h4>Posição Atual</h4>
-                          <h5>Km 206</h5>
+                          <h5 class="font-weight-medium">Km 206</h5>
                         </div>
                       </v-col>
                       <v-col
@@ -170,7 +170,7 @@
                       >
                         <div class="d-flex flex-column">
                           <h4>Ultima Parada</h4>
-                          <h5>2 hrs atrás</h5>
+                          <h5 class="font-weight-medium">2 hrs atrás</h5>
                         </div>
                       </v-col>
                       <v-col
@@ -179,7 +179,7 @@
                       >
                         <div class="d-flex flex-column">
                           <h4>Distancia</h4>
-                          <h5>250 km</h5>
+                          <h5 class="font-weight-medium">250 km</h5>
                         </div>
                       </v-col>
                       <v-col
@@ -188,7 +188,7 @@
                       >
                         <div class="d-flex flex-column">
                           <h4>Velocidade</h4>
-                          <h5>90 km/h</h5>
+                          <h5 class="font-weight-medium">90 km/h</h5>
                         </div>
                       </v-col>
                     </v-row>
@@ -201,9 +201,30 @@
                       border-radius: 15px;
                       top: 75vh;
                     "
-                    class="glass mt-7"
+                    class="glass"
                   >
-                    outro card
+                    <v-tabs
+                      v-model="tab"
+                      bg-color="transparent"
+                      color="basil"
+                      grow
+                    >
+                      <v-tab v-for="item in items" :key="item" :value="item">
+                        {{ item }}
+                      </v-tab>
+                    </v-tabs>
+
+                    <v-window v-model="tab">
+                      <v-window-item
+                        v-for="item in items"
+                        :key="item"
+                        :value="item"
+                      >
+                        <v-card style="height: 100vh" class="glass">
+                          <v-card-text>{{ text }}</v-card-text>
+                        </v-card>
+                      </v-window-item>
+                    </v-window>
                   </v-card>
                 </v-col>
               </v-sheet>
@@ -280,7 +301,7 @@ export default {
       ["mdi-alert-octagon", "Entregues"],
     ],
     tab: "Appetizers",
-    items: ["Informações", "Veículo", "Companhia", "Adiantamentos"],
+    items: ["Informações", "Motorista", "Veículo", "Contratante", "Documentos"],
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   }),
 };
