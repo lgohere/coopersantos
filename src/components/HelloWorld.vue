@@ -2,7 +2,10 @@
   <v-app class="main-bg">
     <v-sheet>
       <v-navigation-drawer v-model="drawer">
-        <div class="d-flex pt-10 pb-4 px-4 flex-row justify-center">
+        <div
+          class="d-flex pt-10 pb-4 px-4 flex-column align-center justify-center"
+        >
+          <v-img src="/cooper-icon.png" style="width: 35%; height: 35%"></v-img>
           <h3 class="brand-color">COOPERSANTOS</h3>
         </div>
         <v-sheet class="py-6 px-4">
@@ -37,120 +40,136 @@
     </v-sheet>
 
     <v-main>
-      <v-container fluid>
-        <v-row>
-          <v-col cols="5" class="pt-8 glass" style="height: 100vh">
-            <v-row>
-              <v-col class="d-flex flex-row justify-space-between">
-                <h2 class="font-weight-medium">Gerenciador de Carregamento</h2>
-                <v-btn
-                  class="box-shadow glass"
-                  variant="outlined"
-                  color="primary"
-                  >Adicionar Ordem</v-btn
-                >
-              </v-col>
-            </v-row>
-            <v-row>
-              <v-col cols="12" class="d-flex justify-start">
-                <v-btn class="mr-2 glass" variant="outlined"
-                  >Ver Todos<v-sheet class="ml-2">30</v-sheet></v-btn
-                >
-                <v-btn class="mr-2 glass" variant="outlined"
-                  >Em Andamento <v-sheet class="ml-2">18</v-sheet></v-btn
-                >
-                <v-btn class="mr-2 glass" variant="outlined"
-                  >Pendentes <v-sheet class="ml-2">12</v-sheet></v-btn
-                >
-              </v-col>
-            </v-row>
-            <v-row>
-              <v-col cols="6">
-                <v-card style="border-radius: 7px">
-                  <v-row class="d-flex pa-4">
-                    <v-col cols="8">
-                      <h3 class="font-weight-medium">Ordem</h3>
-                      <h2>ABC-4558</h2>
-                    </v-col>
-                    <v-col class="d-flex flex-column justify-start" cols="4">
-                      <v-img width="80" src="@/assets/truck.svg"></v-img>
-                    </v-col>
-                  </v-row>
+      <div>
+        <v-container fluid>
+          <v-row>
+            <v-col xl="5" lg="5" md="6" sm="12" xs="12" class="pa-6 glass">
+              <v-row>
+                <v-col class="px-0 py-6 d-flex flex-row justify-space-between">
+                  <h2 class="title-responsive font-weight-medium">
+                    Gerenciador de Carregamento
+                  </h2>
+                  <v-btn
+                    class="box-shadow glass btn-responsive"
+                    variant="outlined"
+                    color="primary"
+                    >Adicionar Ordem</v-btn
+                  >
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-row>
+                  <v-col class="d-flex flex-column">
+                    <v-btn class="glass mb-2" variant="outlined"
+                      >Ver Todos<v-sheet class="ml-2">30</v-sheet></v-btn
+                    >
+                    <v-btn class="glass mb-2" variant="outlined"
+                      >Em Andamento <v-sheet class="ml-2">18</v-sheet></v-btn
+                    >
+                    <v-btn class="glass mb-2" variant="outlined"
+                      >Pendentes <v-sheet class="ml-2">12</v-sheet></v-btn
+                    >
+                  </v-col>
+                </v-row>
+              </v-row>
+              <v-row>
+                <v-col cols="12" xs="12" lg="6" md="12" sm="6">
+                  <v-card style="border-radius: 7px">
+                    <v-row class="d-flex pa-4">
+                      <v-col cols="8">
+                        <h3 class="font-weight-medium">Ordem</h3>
+                        <h2>ABC-4558</h2>
+                      </v-col>
+                      <v-col class="d-flex flex-column justify-start" cols="4">
+                        <v-img width="80" src="@/assets/truck.svg"></v-img>
+                      </v-col>
+                    </v-row>
 
+                    <v-divider></v-divider>
+                    <div
+                      style="border-radius: 7px"
+                      class="pa-4 d-flex flex-column"
+                    >
+                      <h4>Santos, SP</h4>
+                      <h5>Porto Rei Pelé</h5>
+                      <v-space> <br /> </v-space>
+                      <h4>São Paulo, SP</h4>
+                      <h5>Armazem Fulano de Tal</h5>
+                    </div>
+                    <v-divider></v-divider>
+                    <div
+                      style="border-radius: 7px"
+                      class="pa-4 d-flex flex-column"
+                    >
+                      <h5>Cliente</h5>
+                      <h4>Luiz Gouveia</h4>
+                      <h5>Santos/SP</h5>
+                    </div>
+                  </v-card>
                   <v-divider></v-divider>
-                  <div
-                    style="border-radius: 7px"
-                    class="pa-4 d-flex flex-column"
-                  >
-                    <h4>Santos, SP</h4>
-                    <h5>Porto Rei Pelé</h5>
-                    <v-space> <br /> </v-space>
-                    <h4>São Paulo, SP</h4>
-                    <h5>Armazem Fulano de Tal</h5>
-                  </div>
-                  <v-divider></v-divider>
-                  <div
-                    style="border-radius: 7px"
-                    class="pa-4 d-flex flex-column"
-                  >
-                    <h5>Cliente</h5>
-                    <h4>Luiz Gouveia</h4>
-                    <h5>Santos/SP</h5>
-                  </div>
-                </v-card>
-                <v-divider></v-divider>
-              </v-col>
-              <v-col cols="6">
-                <v-card style="border-radius: 7px">
-                  <v-row class="d-flex pa-4">
-                    <v-col cols="8">
-                      <h3 class="font-weight-medium">Ordem</h3>
-                      <h2>ABC-4558</h2>
-                    </v-col>
-                    <v-col class="d-flex flex-column justify-start" cols="4">
-                      <v-img width="80" src="@/assets/truck.svg"></v-img>
-                    </v-col>
-                  </v-row>
+                </v-col>
+                <v-col cols="12" xs="12" lg="6" md="12" sm="6">
+                  <v-card style="border-radius: 7px">
+                    <v-row class="d-flex pa-4">
+                      <v-col cols="8">
+                        <h3 class="font-weight-medium">Ordem</h3>
+                        <h2>ABC-4558</h2>
+                      </v-col>
+                      <v-col class="d-flex flex-column justify-start" cols="4">
+                        <v-img width="80" src="@/assets/truck.svg"></v-img>
+                      </v-col>
+                    </v-row>
 
+                    <v-divider></v-divider>
+                    <div
+                      style="border-radius: 7px"
+                      class="pa-4 d-flex flex-column"
+                    >
+                      <h4>Santos, SP</h4>
+                      <h5>Porto Rei Pelé</h5>
+                      <v-space> <br /> </v-space>
+                      <h4>São Paulo, SP</h4>
+                      <h5>Armazem Fulano de Tal</h5>
+                    </div>
+                    <v-divider></v-divider>
+                    <div
+                      style="border-radius: 7px"
+                      class="pa-4 d-flex flex-column"
+                    >
+                      <h5>Cliente</h5>
+                      <h4>Luiz Gouveia</h4>
+                      <h5>Santos/SP</h5>
+                    </div>
+                  </v-card>
                   <v-divider></v-divider>
-                  <div
-                    style="border-radius: 7px"
-                    class="pa-4 d-flex flex-column"
-                  >
-                    <h4>Santos, SP</h4>
-                    <h5>Porto Rei Pelé</h5>
-                    <v-space> <br /> </v-space>
-                    <h4>São Paulo, SP</h4>
-                    <h5>Armazem Fulano de Tal</h5>
-                  </div>
-                  <v-divider></v-divider>
-                  <div
-                    style="border-radius: 7px"
-                    class="pa-4 d-flex flex-column"
-                  >
-                    <h5>Cliente</h5>
-                    <h4>Luiz Gouveia</h4>
-                    <h5>Santos/SP</h5>
-                  </div>
-                </v-card>
-                <v-divider></v-divider>
-              </v-col>
-            </v-row>
-          </v-col>
-          <v-col>
-            <v-row>
-              <v-sheet style="height: 100vh; width: 100%" class="glass">
-                <!-- Fundo -->
-                <v-col cols="12" class="d-flex justify-center mapa">
-                  Mapa tempo real
+                </v-col>
+              </v-row>
+            </v-col>
+            <v-col
+              style="background: grey; height: 100vh"
+              class="pa-1 d-flex justify-center"
+              cols="12"
+              xl=""
+              lg="7"
+              md="6"
+              sm="12"
+              xs="12"
+            >
+              <!-- aqui vai o mapa -->
+              <v-col
+                id="shipment-info-text"
+                class="pa-6 d-flex flex-column justify-center glass"
+              >
+                <v-row
+                  style="position: relative; z-index: 2"
+                  class="d-flex justify-center"
+                >
                   <v-card
                     style="
+                      top: 2vh;
                       height: 8vh;
-                      position: absolute;
-                      width: 40%;
+                      width: 90%;
                       border-radius: 15px;
-                      z-index: 2;
-                      top: 7vh;
                     "
                     class="glass d-flex"
                   >
@@ -193,13 +212,19 @@
                       </v-col>
                     </v-row>
                   </v-card>
+                </v-row>
+
+                <v-row
+                  style="position: relative; z-index: 2"
+                  class="d-flex align-end justify-center"
+                >
                   <v-card
                     style="
                       height: 20vh;
-                      width: 45%;
-                      position: absolute;
+                      width: 90%;
+                      position: relative;
                       border-radius: 15px;
-                      top: 75vh;
+                      bottom: 2vh;
                     "
                     class="glass"
                   >
@@ -220,23 +245,38 @@
                         :key="item"
                         :value="item"
                       >
-                        <v-card style="height: 100vh" class="glass">
+                        <v-card class="glass">
                           <v-card-text>{{ text }}</v-card-text>
                         </v-card>
                       </v-window-item>
                     </v-window>
                   </v-card>
-                </v-col>
-              </v-sheet>
-            </v-row>
-          </v-col>
-        </v-row>
-      </v-container>
+                </v-row>
+              </v-col>
+            </v-col>
+          </v-row>
+        </v-container>
+      </div>
     </v-main>
   </v-app>
 </template>
 
 <style scoped>
+@media (max-width: 400px) {
+  .title-responsive {
+    font-size: 22px;
+  }
+  .btn-responsive {
+    width: 45%;
+  }
+}
+
+@media (max-width: 1347px) {
+  #shipment-info-text {
+    font-size: 90%;
+  }
+}
+
 .botoesStatus {
   display: flex;
 }
@@ -275,13 +315,17 @@
 .mapa {
   color: white;
   background: #8080808a;
-  height: 100vh;
-  z-index: 1;
 }
 </style>
 
 <script>
 export default {
+  computed: {
+    cols() {
+      const { lg, sm } = this.$vuetify.display;
+      return lg ? [5, 7] : sm ? [12] : [12];
+    },
+  },
   data: () => ({
     ordens: [
       {
