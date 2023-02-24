@@ -178,13 +178,14 @@
                 class="px-1 pt-6 d-flex flex-column justify-center glass"
               >
                 <v-row
-                  style="position: relative; z-index: 2"
+                  style="position: relative; z-index: 2     font-size: 13px;
+    padding: 0 13px;"
                   class="d-flex justify-center mx-0 px-0"
                 >
                   <v-card class="glass d-flex info-shipment">
-                    <v-row class="d-flex mx-0 px-0">
+                    <v-row class="d-flex">
                       <v-col
-                        class="d-flex flex-column align-center justify-center"
+                        class="d-flex flex-column align-center justify-center pa-2"
                         cols="3"
                       >
                         <div class="d-flex flex-column">
@@ -271,7 +272,7 @@
 </template>
 
 <style scoped>
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .title-responsive {
     font-size: 22px;
   }
@@ -282,6 +283,9 @@
   .info-shipment {
     width: 100%;
     font-size: 13.5px;
+    height: 12vh;
+    font-size: 13px;
+    padding: 0 13px;
   }
 }
 
