@@ -175,22 +175,14 @@
               <!-- aqui vai o mapa -->
               <v-col
                 id="shipment-info-text"
-                class="pa-6 d-flex flex-column justify-center glass"
+                class="px-1 pt-6 d-flex flex-column justify-center glass"
               >
                 <v-row
                   style="position: relative; z-index: 2"
-                  class="d-flex justify-center"
+                  class="d-flex justify-center mx-0 px-0"
                 >
-                  <v-card
-                    style="
-                      top: 2vh;
-                      height: 8vh;
-                      width: 90%;
-                      border-radius: 15px;
-                    "
-                    class="glass d-flex"
-                  >
-                    <v-row class="d-flex">
+                  <v-card class="glass d-flex info-shipment">
+                    <v-row class="d-flex mx-0 px-0">
                       <v-col
                         class="d-flex flex-column align-center justify-center"
                         cols="3"
@@ -286,6 +278,11 @@
   .btn-responsive {
     width: 45%;
   }
+
+  .info-shipment {
+    width: 100%;
+    font-size: 13.5px;
+  }
 }
 
 @media (max-width: 1347px) {
@@ -306,6 +303,13 @@
     rgb(109 200 146 / 25%),
     rgb(53 179 104 / 35%)
   );
+}
+
+.info-shipment {
+  top: 2vh;
+  height: 8vh;
+  width: 90%;
+  border-radius: 15px;
 }
 
 .caminhao {
