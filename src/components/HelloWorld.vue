@@ -178,11 +178,13 @@
                 class="px-1 pt-6 d-flex flex-column justify-center glass"
               >
                 <v-row
-                  style="position: relative; z-index: 2     font-size: 13px;
-    padding: 0 13px;"
+                  style="position: relative; z-index: 2 font-size: 13px"
                   class="d-flex justify-center mx-0 px-0"
                 >
-                  <v-card class="glass d-flex info-shipment">
+                  <v-card
+                    class="glass d-flex info-shipment"
+                    style="height: 9vh"
+                  >
                     <v-row class="d-flex">
                       <v-col
                         class="d-flex flex-column align-center justify-center pa-2"
@@ -283,7 +285,6 @@
   .info-shipment {
     width: 100%;
     font-size: 13.5px;
-    height: 12vh;
     font-size: 13px;
     padding: 0 13px;
   }
@@ -299,6 +300,12 @@
   display: flex;
 }
 
+.info-shipment {
+  top: 2vh;
+  width: 90%;
+  border-radius: 15px;
+}
+
 .v-btn {
   text-transform: none;
   letter-spacing: none;
@@ -307,13 +314,6 @@
     rgb(109 200 146 / 25%),
     rgb(53 179 104 / 35%)
   );
-}
-
-.info-shipment {
-  top: 2vh;
-  height: 8vh;
-  width: 90%;
-  border-radius: 15px;
 }
 
 .caminhao {
