@@ -51,8 +51,8 @@
                   </h2>
                   <v-btn
                     class="box-shadow glass btn-responsive"
+                    color="green"
                     variant="outlined"
-                    color="primary"
                     >Adicionar Ordem</v-btn
                   >
                 </v-col>
@@ -303,8 +303,8 @@
   letter-spacing: none;
   background: linear-gradient(
     to right bottom,
-    rgb(109 200 146 / 45%),
-    rgb(53 179 104 / 55%)
+    rgb(109 200 146 / 25%),
+    rgb(53 179 104 / 35%)
   );
 }
 
