@@ -60,14 +60,31 @@
               <v-row>
                 <v-row>
                   <v-col class="d-flex flex-column">
-                    <v-btn class="glass mb-2" variant="outlined"
-                      >Ver Todos<v-sheet class="ml-2">30</v-sheet></v-btn
+                    <v-btn class="mb-2" variant="outlined"
+                      >Ver Todos<v-sheet
+                        color="green"
+                        style="border-radius: 25px"
+                        class="ml-2 pa-1"
+                        >30</v-sheet
+                      ></v-btn
                     >
-                    <v-btn class="glass mb-2" variant="outlined"
-                      >Em Andamento <v-sheet class="ml-2">18</v-sheet></v-btn
+                    <v-btn class="mb-2" variant="outlined"
+                      >Em Andamento
+                      <v-sheet
+                        class="ml-2 pa-1"
+                        color="green"
+                        style="border-radius: 25px"
+                        >18</v-sheet
+                      ></v-btn
                     >
-                    <v-btn class="glass mb-2" variant="outlined"
-                      >Pendentes <v-sheet class="ml-2">12</v-sheet></v-btn
+                    <v-btn class="mb-2" variant="outlined"
+                      >Pendentes
+                      <v-sheet
+                        class="ml-2 pa-1"
+                        color="green"
+                        style="border-radius: 25px"
+                        >12</v-sheet
+                      ></v-btn
                     >
                   </v-col>
                 </v-row>
@@ -147,7 +164,7 @@
             </v-col>
             <v-col
               style="background: grey; height: 100vh"
-              class="pa-1 d-flex justify-center"
+              class="px-1 py-lg-0 pt-md-0 d-flex justify-center"
               cols="12"
               xl=""
               lg="7"
@@ -284,6 +301,11 @@
 .v-btn {
   text-transform: none;
   letter-spacing: none;
+  background: linear-gradient(
+    to right bottom,
+    rgb(109 200 146 / 45%),
+    rgb(53 179 104 / 55%)
+  );
 }
 
 .caminhao {
@@ -291,11 +313,11 @@
 }
 
 .main-bg {
-  background: rgba(37, 214, 108, 0.5);
+  background: rgba(37, 214, 108, 0.8);
   background: linear-gradient(
     to right bottom,
-    rgba(37, 214, 108, 0.7),
-    rgba(0, 0, 0, 0.3)
+    rgb(7, 66, 31),
+    rgb(255, 255, 255)
   );
 }
 
@@ -304,8 +326,9 @@
   background: linear-gradient(
     to right bottom,
     rgba(255, 255, 255, 0.7),
-    rgba(255, 255, 255, 0.3)
+    rgba(255, 255, 255, 0.76)
   );
+  backdrop-filter: blur(4px);
 }
 
 .brand-color {
