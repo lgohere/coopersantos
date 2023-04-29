@@ -1,8 +1,8 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <HelloWorld />
+  <MotorGestor />
 </template>
 
 <script setup>
-import HelloWorld from "@/components/HelloWorld.vue";
+import MotorGestor from "@/components/MotorGestor.vue";
 </script>
