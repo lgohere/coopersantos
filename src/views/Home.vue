@@ -1,8 +1,8 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <MotorGestor />
+  <ListaDeRemessas />
 </template>
 
 <script setup>
-import MotorGestor from "@/components/MotorGestor.vue";
+import ListaDeRemessas from "@/components/ListaDeRemessas.vue";
 </script>

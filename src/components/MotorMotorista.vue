@@ -4,14 +4,16 @@
       <v-container class="logo">
         <v-img src="/logo.png" height="170"></v-img>
       </v-container>
-      <v-btn
-        class="botao"
-        :loading="loading"
-        @click="loading = !loading"
-        block
-        size="x-large"
-        >INICIAR VIAGEM</v-btn
-      >
+      <div>
+        <v-btn
+          class="botao"
+          block
+          size="x-large"
+          :loading="loading"
+          @click="loading = !loading"
+          >INICIAR VIAGEM</v-btn
+        >
+      </div>
     </v-col>
   </v-container>
 </template>
@@ -33,7 +35,7 @@
   border: 1px solid #443a81;
   box-shadow: 3px 3px 1px #007df1,
     inset -11px -5px 10px 5px rgba(70, 166, 255, 0.12);
-  border-radius: 21px;
+  /* border-radius: 21px; */
 }
 
 .logo {
