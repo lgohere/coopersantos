@@ -57,22 +57,11 @@
   background: linear-gradient(95.64deg, #e2e8d8 8.99%, #d0ebde 91.01%);
 }
 
-.texto-ft {
-  font-weight: 500;
-}
-
 .sombra {
-  /*  
-  background: #85ff66;
-  - CRIAR VIAGEM: #85FF66
-  - ENCERRAR VIAGEM: #FCFF5C 
-*/
-
   box-sizing: border-box;
   border: 1px solid #443a81;
   box-shadow: 3px 3px 1px #007df1,
     inset -11px -5px 10px 5px rgba(70, 166, 255, 0.12);
-  /* border-radius: 21px; */
 }
 
 .logo {
