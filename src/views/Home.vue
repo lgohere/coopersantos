@@ -1,8 +1,8 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <ListaDeRemessas />
+  <LoginMotorista />
 </template>
 
 <script setup>
-import ListaDeRemessas from "@/components/ListaDeRemessas.vue";
+import LoginMotorista from "@/components/LoginMotorista.vue";
 </script>
